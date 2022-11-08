@@ -1,23 +1,22 @@
-let img;
-let font;
-let tvX;
-let tvY;
-let doorX;
-let doorY;
-let colors= [("black"), ("pink"), ("red"), ("blue"), ("darkblue"), ("yellow"), ("green"), ("white")];
+
 
 function sketch (){
 
-  this.preload = function(){
+  this.setup = function(){
+    let img;
     img = loadImage("assets/tvroom.jpg");
-    font = loadFont ("assets/Urbanist-VariableFont_wght.ttf");
+  
     }
  
-  this.setup = function() {
-  frameRate(2);
-  noStroke();
-  textFont(font); 
-  rectMode(CENTER);
+  this.enter = function() {
+    let font
+    ;font = loadFont ("assets/Urbanist-VariableFont_wght.ttf");
+    let colors= [("black"), ("pink"), ("red"), ("blue"), ("darkblue"), ("yellow"), ("green"), ("white")];
+    frameRate(2);
+    noStroke();
+    textFont(font); 
+    rectMode(CENTER);
+  }
 
 }
   this.draw = function() {
@@ -26,14 +25,14 @@ function sketch (){
   
   //tv static
    
-  drawStatic(tvX, tvY);
+  this.drawStatic();
   if (frameCount % 60 == 0) {
     fill(random(colors));}
   //end tv static
 
   //door text
-  doorsRight(doorX, doorY);
-  doorsLeft (doorX, doorY);
+  this.doorsRight();
+  this.doorsLeft ();
 
   //end door text
 }
@@ -45,7 +44,7 @@ this.mouseClicked = function () {
 }
 
 //this is the tv animation function 
-this.drawStatic = function(_tvX, _tvY) { 
+this.drawStatic = function() { 
   
   fill(random(colors));
   rect(411, 338, 6, 6);
@@ -96,7 +95,7 @@ this.drawStatic = function(_tvX, _tvY) {
 }
 
 //this is the right side door text
-this.doorsRight = function (_doorX, _doorY, ) {
+this.doorsRight = function () {
   fill(9.8,9.8,43.9,150);
   textStyle("bold");
   textSize (50); 
@@ -114,7 +113,7 @@ this.doorsRight = function (_doorX, _doorY, ) {
 }
 
 //this is the left side door text 
-this.doorsLeft = function (_b, _doorX, _doorY) {
+this.doorsLeft = function () {
 
  textSize(12); 
  fill(100,149,237,150);
@@ -128,4 +127,4 @@ this.doorsLeft = function (_b, _doorX, _doorY) {
   textSize (50); 
   text ("1", 76,240,); 
 }
-}
+

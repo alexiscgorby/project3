@@ -1,7 +1,7 @@
 
 function rightdoorone() {
 
-    this.setup = function() {
+    this.enter = function() {
     
     }
 

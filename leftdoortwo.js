@@ -1,6 +1,6 @@
 function leftdoortwo() {
 
-    this.setup = function() {
+    this.enter = function() {
     
     }
 
