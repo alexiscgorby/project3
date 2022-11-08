@@ -10,7 +10,7 @@ function sketch (){
 
   this.preload = function(){
     img = loadImage("assets/tvroom.jpg");
-    font = loadFont ("assets/Urbanist-VariableFont_wght.ttf")
+    font = loadFont ("assets/Urbanist-VariableFont_wght.ttf");
     }
  
   this.setup = function() {
@@ -33,11 +33,10 @@ function sketch (){
 
   //door text
   doorsRight(doorX, doorY);
-  doorsLeft(b, doorX, doorY);
+  doorsLeft (doorX, doorY);
 
   //end door text
 }
-
 //mouse clicked function for going to different stages when you click on the doors 
 this.mouseClicked = function () {
   if (collidePointRect(mouseX, mouseY, 200, 200, 100, 150)) {

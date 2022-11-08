@@ -5,6 +5,7 @@ function setup () {
     mgr = new SceneManager ();
     mgr.wire();
     mgr.showScene(sketch);
+    textFont (font)
 
 }
 
