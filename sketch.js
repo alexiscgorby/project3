@@ -9,9 +9,9 @@ function sketch (){
     }
  
   this.enter = function() {
-    let font
-    ;font = loadFont ("assets/Urbanist-VariableFont_wght.ttf");
-    let colors= [("black"), ("pink"), ("red"), ("blue"), ("darkblue"), ("yellow"), ("green"), ("white")];
+    let font;
+    font = loadFont ("assets/Urbanist-VariableFont_wght.ttf");
+    let colors = [("black"), ("pink"), ("red"), ("blue"), ("darkblue"), ("yellow"), ("green"), ("white")];
     frameRate(2);
     noStroke();
     textFont(font); 
@@ -38,10 +38,8 @@ function sketch (){
 }
 //mouse clicked function for going to different stages when you click on the doors 
 this.mouseClicked = function () {
-  if (collidePointRect(mouseX, mouseY, 200, 200, 100, 150)) {
     this.sceneManager.showScene(leftdoorone);
   }
-}
 
 //this is the tv animation function 
 this.drawStatic = function() { 
