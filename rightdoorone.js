@@ -2,11 +2,12 @@
 function rightdoorone() {
 
     this.enter = function() {
-        background("black");
 
     }
 
     this.draw = function() {
+     background("black");
+
     }
 
     this.mouseClicked = function() {
